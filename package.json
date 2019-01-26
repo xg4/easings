@@ -1,0 +1,35 @@
+{
+  "name": "@xg4/easings",
+  "version": "0.0.1",
+  "description": "easings",
+  "main": "dist/index.min.js",
+  "author": "xg4 <xingor4@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "release": "npm run build && cross-env-shell git commit -am \"v\"$npm_package_version && cross-env-shell git tag \"v\"$npm_package_version && git push && git push --tags && npm publish --access=public"
+  },
+  "keywords": [
+    "easings"
+  ],
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.3.1",
+    "cross-env": "^5.2.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-uglify": "^6.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xg4/easings.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xg4/easings/issues"
+  },
+  "homepage": "https://github.com/xg4/easings#readme"
+}
