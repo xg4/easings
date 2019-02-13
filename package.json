@@ -2,7 +2,8 @@
   "name": "@xg4/easings",
   "version": "0.0.1",
   "description": "easings",
-  "main": "dist/index.min.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "author": "xg4 <xingor4@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -22,7 +23,7 @@
     "cross-env": "^5.2.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-uglify": "^6.0.2"
+    "rollup-plugin-terser": "^4.0.4"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 import babel from 'rollup-plugin-babel'
-import { uglify } from 'rollup-plugin-uglify'
+import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 export default [
@@ -7,16 +7,20 @@ export default [
     input: 'src/index.js',
     output: [
       {
+        name: 'XEasings',
         file: pkg.main,
-        format: 'umd',
-        name: 'easings'
+        format: 'umd'
+      },
+      {
+        file: pkg.module,
+        format: 'es'
       }
     ],
     plugins: [
       babel({
         exclude: 'node_modules/**'
       }),
-      uglify()
+      terser()
     ]
   }
 ]
