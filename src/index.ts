@@ -1,30 +1,30 @@
-export function easeInQuad(t, b, c, d) {
+export function easeInQuad(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * (t /= d) * t + b
 }
 
-export function easeOutQuad(t, b, c, d) {
+export function easeOutQuad(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return -cc * (t /= d) * (t - 2) + b
 }
 
-export function easeInOutQuad(t, b, c, d) {
+export function easeInOutQuad(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if ((t /= d / 2) < 1) return (cc / 2) * t * t + b
   return (-cc / 2) * (--t * (t - 2) - 1) + b
 }
 
-export function easeInCubic(t, b, c, d) {
+export function easeInCubic(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * (t /= d) * t * t + b
 }
 
-export function easeOutCubic(t, b, c, d) {
+export function easeOutCubic(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * ((t = t / d - 1) * t * t + 1) + b
 }
 
-export function easeInOutCubic(t, b, c, d) {
+export function easeInOutCubic(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if ((t /= d / 2) < 1) {
     return (cc / 2) * t * t * t + b
@@ -33,64 +33,64 @@ export function easeInOutCubic(t, b, c, d) {
   }
 }
 
-export function easeInQuart(t, b, c, d) {
+export function easeInQuart(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * (t /= d) * t * t * t + b
 }
 
-export function easeOutQuart(t, b, c, d) {
+export function easeOutQuart(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return -cc * ((t = t / d - 1) * t * t * t - 1) + b
 }
 
-export function easeInOutQuart(t, b, c, d) {
+export function easeInOutQuart(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if ((t /= d / 2) < 1) return (cc / 2) * t * t * t * t + b
   return (-cc / 2) * ((t -= 2) * t * t * t - 2) + b
 }
 
-export function easeInQuint(t, b, c, d) {
+export function easeInQuint(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * (t /= d) * t * t * t * t + b
 }
 
-export function easeOutQuint(t, b, c, d) {
+export function easeOutQuint(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * ((t = t / d - 1) * t * t * t * t + 1) + b
 }
 
-export function easeInOutQuint(t, b, c, d) {
+export function easeInOutQuint(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if ((t /= d / 2) < 1) return (cc / 2) * t * t * t * t * t + b
   return (cc / 2) * ((t -= 2) * t * t * t * t + 2) + b
 }
 
-export function easeInSine(t, b, c, d) {
+export function easeInSine(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return -cc * Math.cos((t / d) * (Math.PI / 2)) + cc + b
 }
 
-export function easeOutSine(t, b, c, d) {
+export function easeOutSine(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * Math.sin((t / d) * (Math.PI / 2)) + b
 }
 
-export function easeInOutSine(t, b, c, d) {
+export function easeInOutSine(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return (-cc / 2) * (Math.cos((Math.PI * t) / d) - 1) + b
 }
 
-export function easeInExpo(t, b, c, d) {
+export function easeInExpo(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return t == 0 ? b : cc * Math.pow(2, 10 * (t / d - 1)) + b
 }
 
-export function easeOutExpo(t, b, c, d) {
+export function easeOutExpo(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return t == d ? b + cc : cc * (-Math.pow(2, (-10 * t) / d) + 1) + b
 }
 
-export function easeInOutExpo(t, b, c, d) {
+export function easeInOutExpo(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if (t == 0) return b
   if (t == d) return b + cc
@@ -98,23 +98,23 @@ export function easeInOutExpo(t, b, c, d) {
   return (cc / 2) * (-Math.pow(2, -10 * --t) + 2) + b
 }
 
-export function easeInCirc(t, b, c, d) {
+export function easeInCirc(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return -cc * (Math.sqrt(1 - (t /= d) * t) - 1) + b
 }
 
-export function easeOutCirc(t, b, c, d) {
+export function easeOutCirc(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc * Math.sqrt(1 - (t = t / d - 1) * t) + b
 }
 
-export function easeInOutCirc(t, b, c, d) {
+export function easeInOutCirc(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if ((t /= d / 2) < 1) return (-cc / 2) * (Math.sqrt(1 - t * t) - 1) + b
   return (cc / 2) * (Math.sqrt(1 - (t -= 2) * t) + 1) + b
 }
 
-export function easeInElastic(t, b, c, d) {
+export function easeInElastic(t: number, b: number, c: number, d: number) {
   const cc = c - b
   let s = 1.70158
   let p = 0
@@ -135,7 +135,7 @@ export function easeInElastic(t, b, c, d) {
   )
 }
 
-export function easeOutElastic(t, b, c, d) {
+export function easeOutElastic(t: number, b: number, c: number, d: number) {
   const cc = c - b
   let s = 1.70158
   let p = 0
@@ -154,7 +154,7 @@ export function easeOutElastic(t, b, c, d) {
   )
 }
 
-export function easeInOutElastic(t, b, c, d) {
+export function easeInOutElastic(t: number, b: number, c: number, d: number) {
   const cc = c - b
   let s = 1.70158
   let p = 0
@@ -184,19 +184,37 @@ export function easeInOutElastic(t, b, c, d) {
   )
 }
 
-export function easeInBack(t, b, c, d, s) {
+export function easeInBack(
+  t: number,
+  b: number,
+  c: number,
+  d: number,
+  s: number
+) {
   const cc = c - b
   if (s == undefined) s = 1.70158
   return cc * (t /= d) * t * ((s + 1) * t - s) + b
 }
 
-export function easeOutBack(t, b, c, d, s) {
+export function easeOutBack(
+  t: number,
+  b: number,
+  c: number,
+  d: number,
+  s: number
+) {
   const cc = c - b
   if (s == undefined) s = 1.70158
   return cc * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b
 }
 
-export function easeInOutBack(t, b, c, d, s) {
+export function easeInOutBack(
+  t: number,
+  b: number,
+  c: number,
+  d: number,
+  s: number
+) {
   const cc = c - b
   if (s == undefined) s = 1.70158
   if ((t /= d / 2) < 1)
@@ -204,12 +222,12 @@ export function easeInOutBack(t, b, c, d, s) {
   return (cc / 2) * ((t -= 2) * t * (((s *= 1.525) + 1) * t + s) + 2) + b
 }
 
-export function easeInBounce(t, b, c, d) {
+export function easeInBounce(t: number, b: number, c: number, d: number) {
   const cc = c - b
   return cc - easeOutBounce(d - t, 0, cc, d) + b
 }
 
-export function easeOutBounce(t, b, c, d) {
+export function easeOutBounce(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if ((t /= d) < 1 / 2.75) {
     return cc * (7.5625 * t * t) + b
@@ -222,7 +240,7 @@ export function easeOutBounce(t, b, c, d) {
   }
 }
 
-export function easeInOutBounce(t, b, c, d) {
+export function easeInOutBounce(t: number, b: number, c: number, d: number) {
   const cc = c - b
   if (t < d / 2) return easeInBounce(t * 2, 0, cc, d) * 0.5 + b
   return easeOutBounce(t * 2 - d, 0, cc, d) * 0.5 + cc * 0.5 + b

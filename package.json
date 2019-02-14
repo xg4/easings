@@ -2,10 +2,13 @@
   "name": "@xg4/easings",
   "version": "0.0.2",
   "description": "easings",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "author": "xg4 <xingor4@gmail.com>",
-  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
@@ -14,15 +17,16 @@
   "keywords": [
     "easings"
   ],
-  "files": [
-    "dist"
-  ],
+  "author": "xg4 <xingor4@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.0.0-0",
+    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.1.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-terser": "^4.0.4"
+    "rollup-plugin-terser": "^4.0.4",
+    "typescript": "^3.3.3"
   },
   "repository": {
     "type": "git",
