@@ -1,6 +1,8 @@
 # easings
 
 [![Build Status](https://www.travis-ci.org/xg4/easings.svg?branch=master)](https://www.travis-ci.org/xg4/easings)
+[![npm](https://img.shields.io/npm/v/@xg4/easings.svg)](https://www.npmjs.com/package/@xg4/easings)
+[![npm](https://img.shields.io/npm/l/@xg4/easings.svg)](https://www.npmjs.com/package/@xg4/easings)
 
 ## Installation
 
